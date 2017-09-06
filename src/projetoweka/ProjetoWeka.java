@@ -6,6 +6,8 @@
 package projetoweka;
 
 import projetoweka.test.testeWeka;
+import projetoweka.view.BuscaArquivo;
+import projetoweka.view.controller.LookAndFeelController;
 
 /**
  *
@@ -19,14 +21,18 @@ public class ProjetoWeka {
      * @param args the command line arguments
      */
     public static void main(String[] args) throws Exception {
-        caminhoDados = "iris.arff";
+        /*caminhoDados = "arquivos/iris.arff";
         
         testeWeka exemplo = new testeWeka(caminhoDados);
         
         exemplo.leDados();
-        //exemplo.imprimeDados();
+        exemplo.imprimeDados();
         //exemplo.arvoreDeDecisaoJ48();
-        exemplo.InstanceBased();
+        //exemplo.InstanceBased();*/
+        
+        LookAndFeelController.setLookAndFeel();
+        
+        new BuscaArquivo().setVisible(true);
     }
     
 }
