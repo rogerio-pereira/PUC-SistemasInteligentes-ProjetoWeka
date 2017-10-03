@@ -6,6 +6,7 @@
 package projetoweka.view;
 
 import projetoweka.controller.MainController;
+import projetoweka.model.Relatorio;
 
 /**
  *
@@ -80,7 +81,8 @@ public class Principal extends javax.swing.JFrame {
     private void menuRelatoriosDadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuRelatoriosDadosActionPerformed
         String relatorio = controller.imprimeDados();
         
-        new Relatorios("Dados Inicial", relatorio).setVisible(true);
+        Relatorio model = new Relatorio("Dados Inicial", relatorio);
+        new Relatorios(model).setVisible(true);
     }//GEN-LAST:event_menuRelatoriosDadosActionPerformed
 
     private void menuRelatoriosArvoreDeDecisaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuRelatoriosArvoreDeDecisaoActionPerformed

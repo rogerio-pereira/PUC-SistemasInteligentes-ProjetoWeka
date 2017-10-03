@@ -10,6 +10,7 @@ import java.util.logging.Logger;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import projetoweka.controller.MainController;
+import projetoweka.model.Relatorio;
 
 /**
  *
@@ -167,8 +168,9 @@ public class ConfiguracoesArvoreDeDecisao extends javax.swing.JFrame {
             {
                 String relatorio;
                 relatorio = controller.imprimeArvoreDeDecisao(avaliacaoNormal, avaliacaoCruzada, folds, options);
-
-                new Relatorios("Árvore de Decisão", relatorio).setVisible(true);
+                
+                Relatorio model = new Relatorio("Árvore de Decisão", relatorio);
+                new Relatorios(model).setVisible(true);
             }
         }
         catch(Exception ex)

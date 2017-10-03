@@ -5,6 +5,8 @@
  */
 package projetoweka.view;
 
+import projetoweka.model.Relatorio;
+
 /**
  *
  * @author farofa
@@ -14,11 +16,11 @@ public class Relatorios extends javax.swing.JFrame {
     /**
      * Creates new form Relatorios
      */
-    public Relatorios(String title, String txt) {
+    public Relatorios(Relatorio relatorio) {
         initComponents();
         
-        setTitle("Relatório: "+title);
-        texto.setText(txt);
+        setTitle("Relatório: "+relatorio.getTitle());
+        texto.setText(relatorio.getText());
         texto.setCaretPosition(0);
     }
 
