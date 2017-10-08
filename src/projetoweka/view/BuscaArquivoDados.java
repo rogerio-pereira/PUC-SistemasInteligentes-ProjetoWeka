@@ -11,21 +11,24 @@ import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import javax.swing.filechooser.FileNameExtensionFilter;
-import projetoweka.controller.MainController;
+import projetoweka.controller.DadosController;
 
 /**
  *
  * @author farofa
  */
-public class BuscaArquivo extends javax.swing.JFrame {
+public class BuscaArquivoDados extends javax.swing.JFrame {
+    private DadosController mainController;
 
     /**
      * Creates new form BuscaArquivo
      */
-    public BuscaArquivo() {
+    public BuscaArquivoDados() {
         initComponents();
 	
         this.setLocationRelativeTo(null);
+        
+        this.mainController = new DadosController();
     }
 
     /**
@@ -43,10 +46,10 @@ public class BuscaArquivo extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         botaoIniciar = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Buscar Arquivo de Dados");
 
-        textoArquivo.setText("/home/farofa/Desktop/PUC/SI/ProjetoWeka/arquivos/iris.arff");
+        textoArquivo.setText("./arquivos/harrypotter.arff");
 
         botaoBuscar.setText("Buscar");
         botaoBuscar.addActionListener(new java.awt.event.ActionListener() {
@@ -55,7 +58,7 @@ public class BuscaArquivo extends javax.swing.JFrame {
             }
         });
 
-        botaoIniciar.setText("Iniciar");
+        botaoIniciar.setText("Importar");
         botaoIniciar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botaoIniciarActionPerformed(evt);
@@ -106,11 +109,10 @@ public class BuscaArquivo extends javax.swing.JFrame {
     }//GEN-LAST:event_botaoBuscarActionPerformed
 
     private void botaoIniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoIniciarActionPerformed
-        try {       
-            MainController controller = new MainController(textoArquivo.getText());
+        try {    
+            mainController.setDados(textoArquivo.getText());
         
             this.dispose();
-            new Principal(controller).setVisible(true);
         } catch (Exception ex) {
             JOptionPane.showMessageDialog(
                                             this, 

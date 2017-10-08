@@ -9,7 +9,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
-import projetoweka.controller.MainController;
+import projetoweka.controller.DadosController;
 import projetoweka.model.Relatorio;
 
 /**
@@ -17,12 +17,12 @@ import projetoweka.model.Relatorio;
  * @author farofa
  */
 public class ConfiguracoesArvoreDeDecisao extends javax.swing.JFrame {
-    private MainController controller;
+    private DadosController controller;
 
     /**
      * Creates new form ConfiguracoesArvoreDeDecisao
      */
-    public ConfiguracoesArvoreDeDecisao(MainController controller) {
+    public ConfiguracoesArvoreDeDecisao(DadosController controller) {
         this.controller = controller;
         
         initComponents();
@@ -177,7 +177,7 @@ public class ConfiguracoesArvoreDeDecisao extends javax.swing.JFrame {
         {
             JOptionPane.showMessageDialog(
                                             this, 
-                                            "Erro ao abrir o arquivo de dados"+
+                                            "Erro ao gerar relatório, provavelmente você não importou os dados"+
                                                     "\nErro: "+ex.getMessage()+
                                                     "\nCausa: "+ex.getCause(), 
                                             "Erro", 

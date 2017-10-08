@@ -7,7 +7,9 @@ package projetoweka.controller;
 
 import java.util.Random;
 import weka.classifiers.Evaluation;
+import weka.classifiers.lazy.IBk;
 import weka.classifiers.trees.J48;
+import weka.core.Attribute;
 import weka.core.Instance;
 import weka.core.Instances;
 import weka.core.converters.ConverterUtils.DataSource;
@@ -16,27 +18,20 @@ import weka.core.converters.ConverterUtils.DataSource;
  *
  * @author farofa
  */
-public class MainController {
-    private String caminhoDados;
-    private Instances dados;
+public class DadosController {
+    private static Instances dados;
 
-    /**
-     * Construtor
-     * @param cominhoDados Caminho dos dados
-     * @throws Exception 
-     */
-    public MainController(String caminhoDados) throws Exception {
-        this.caminhoDados = caminhoDados;
-        setDados();
+    public static Instances getDados() {
+        return dados;
     }
     
     /**
      * Le os dados, se a definição de classe não for a primeira, então define como sendo a ultima
      * @throws Exception 
      */
-    private void setDados() throws Exception
+    public void setDados(String caminhoDados) throws Exception
     {
-        DataSource fonte =  new DataSource(this.caminhoDados);
+        DataSource fonte =  new DataSource(caminhoDados);
         this.dados = fonte.getDataSet();
        
         if(this.dados.classIndex() == -1)
@@ -146,5 +141,35 @@ public class MainController {
         
         
         return retorno;
+    }
+    
+    public String classifica(int[] respostas) throws Exception 
+    {
+        //Construção do modelo classificador – 3NN
+        IBk k3 = new IBk(3);
+        k3.buildClassifier(dados);
+        
+        System.out.println(respostas.length);
+        
+        //Criando uma nova instância
+        Instance newInst = new Instance(respostas.length+1);
+        newInst.setDataset(dados);
+        
+        for(int i=0; i<respostas.length; i++) 
+            newInst.setValue(i, respostas[i]);
+        
+        
+        //Classificando a nova instância com base no IBK
+        double pred = k3.classifyInstance(newInst);
+        
+        //Imprimindo valor de predição
+        //System.out.println("Predição: " + pred);
+        
+        //Imprimindo o nome da classe de predição
+        Attribute a = dados.attribute(respostas.length);
+        String predClass = a.value((int) pred);
+        //System.out.println("Predição: " + predClass);
+        
+        return predClass;
     }
 }

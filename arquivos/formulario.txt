@@ -1,0 +1,59 @@
+Pelo que você gostaria de ser lembrado?:
+Pela minha coragem e senso de justiça;
+Pela minha bondade e lealdade;
+Pela minha inteligência e criatividade;
+Pelo meu sucesso e grandeza;
+%%%
+Qual dessas é a pior das ofensas?:
+Ignorante;
+Covarde;
+Medíocre;
+Egoísta;
+%%%
+Qual dessas situações estraga seu dia?:
+Ser obrigado a obedecer a uma regra estúpida;
+Brigar com um amigo;
+Perder em uma competição;
+Falhar em uma prova;
+%%%
+Se você e seu melhor amigo estão em uma situação de perigo, como você age?:
+Salvo a mim mesmo primeiro;
+Fico ao lado do meu amigo, seja para fugir ou para enfrentar;
+Enfrento o perigo e tento salvar nós dois;
+Penso em estratégias para sairmos bem da situação;
+%%%
+Se você pudesse fazer algo pelo resto da vida, o que seria?:
+Ter meu negócio próprio e lucrativo;
+Não importa, desde que estivesse ao lado da minha família e amigos;
+Ler todos os livros do mundo e buscar conhecimento;
+Explorar o mundo;
+%%%
+Se você pudesse escolher qualquer lugar para passar o dia em hogwarts, qual seria?:
+Floresta proibida;
+Clube dos duelos;
+Seção restrita da biblioteca;
+Estufa de herbologia;
+%%%
+Um jogador do seu time de quadribol consegue fazer um ponto de forma desonesta. Qual sua opinião a respeito?:
+É uma forma estúpida de ganhar um jogo;
+Os fins justificam os meios. O ponto é válido;
+Não é justo com os jogadores adversários;
+Prefiro perder do que ganhar sem mérito próprio;
+%%%
+Que tipo de tarefas você prefere?:
+As que me permitem mostrar minhas habilidades;
+As que me permitem testar meus limites;
+As que me desafiam intelectualmente;
+As que me permitem fazer algo de bom ou útil para o mundo;
+%%%
+Em um trabalho em grupo, quem você prefere ser?:
+Prefiro fazer os trabalhos sozinho;
+O que faz suas obrigações de forma eficiente;
+O líder que organiza a parte prática do trabalho;
+O que cria o conceito teórico do trabalho;
+%%%
+Qual personagem secundário de harry potter é seu preferido?:
+Neville Longbottom;
+Luna Lovegood;
+Bellatrix Lestrange;
+Cedrico Diggory;

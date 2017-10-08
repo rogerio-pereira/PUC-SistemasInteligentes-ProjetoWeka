@@ -131,10 +131,10 @@ public class testeWeka {
         Instance newInst = new Instance(5);
         newInst.setDataset(dados);
         newInst.setValue(0, 3);
-        newInst.setValue(1, 3.5);
+        newInst.setValue(1, 0);
         newInst.setValue(2, 8.2);
         newInst.setValue(3, 1.4);
-        newInst.setValue(4, "Iris-versicolor");
+        //newInst.setValue(4, "");
         
         //Classificando a nova instância com base no IBK
         double pred = k3.classifyInstance(newInst);
